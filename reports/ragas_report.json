@@ -1,0 +1,111 @@
+{
+  "aggregate": {
+    "faithfulness": 0.9,
+    "answer_relevancy": 0.85,
+    "context_precision": 0.88,
+    "context_recall": 0.8845
+  },
+  "num_questions": 20,
+  "failures": [
+    {
+      "question": "Nhân viên được nghỉ bao nhiêu ngày phép năm?",
+      "answer": "Trích từ nghi_phep_nam_v2024.md.\n\n# Chính sách nghỉ phép năm (Phiên bản 2024) > Phiên bản: 2.0 | Ngày hiệu lực: 01/01/2024 | Phòng ban: Nhân sự ## Số ngày phép năm Mỗi nhân viên chính thức được hưởng **15 ngày phép năm** có lương, tăng từ 12 ngày so với chính sách năm 2023.",
+      "ground_truth": "Theo chính sách hiện hành (v2024), nhân viên được nghỉ 15 ngày phép năm có lương. Chính sách cũ (v2023) là 12 ngày nhưng đã bị thay thế.",
+      "worst_metric": "context_recall",
+      "score": 0.676,
+      "avg_score": 0.8265,
+      "diagnosis": "Hệ thống tìm kiếm bỏ sót đoạn văn đúng",
+      "suggested_fix": "Cải thiện lại bước cắt đoạn hoặc bổ sung từ khóa BM25"
+    },
+    {
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "answer": "Trích từ nghi_phep_nam_v2024.md.\n\nVí dụ: nhân viên 9 năm thâm niên được 18 ngày phép (15 + 3). ## Quy định sử dụng Phép năm phải được đăng ký trước ít nhất 2 ngày làm việc qua hệ thống HR Portal. Nghỉ phép từ 5 ngày trở lên cần được trưởng phòng phê duyệt.",
+      "ground_truth": "Theo chính sách v2024: 15 ngày cơ bản + 3 ngày thâm niên (9÷3=3) = 18 ngày phép. Lương Senior (P3-P4): 20-35 triệu VNĐ/tháng.",
+      "worst_metric": "context_recall",
+      "score": 0.6783,
+      "avg_score": 0.827075,
+      "diagnosis": "Hệ thống tìm kiếm bỏ sót đoạn văn đúng",
+      "suggested_fix": "Cải thiện lại bước cắt đoạn hoặc bổ sung từ khóa BM25"
+    },
+    {
+      "question": "Muốn mua thiết bị trị giá 55 triệu cần ai phê duyệt?",
+      "answer": "Trích từ mua_sam.md.\n\nMua sắm thiết bị CNTT (laptop, server, phần mềm) cần có xác nhận của phòng CNTT về cấu hình kỹ thuật trước khi đề xuất. Đơn hàng khẩn cấp có thể bỏ qua yêu cầu 3 báo giá nhưng phải có giải trình bằng văn bản.",
+      "ground_truth": "Đơn hàng trên 50.000.000 VNĐ cần Tổng Giám đốc (CEO) phê duyệt.",
+      "worst_metric": "context_recall",
+      "score": 0.7,
+      "avg_score": 0.8325,
+      "diagnosis": "Hệ thống tìm kiếm bỏ sót đoạn văn đúng",
+      "suggested_fix": "Cải thiện lại bước cắt đoạn hoặc bổ sung từ khóa BM25"
+    },
+    {
+      "question": "Thông tin lương thuộc cấp độ phân loại dữ liệu nào?",
+      "answer": "Trích từ ky_luong.md.\n\nPhiếu lương điện tử được gửi qua email công ty vào ngày chi trả. Thắc mắc về lương liên hệ phòng Tài chính trong vòng 5 ngày làm việc. Thông tin lương là dữ liệu **Bí mật**, cấm chia sẻ với đồng nghiệp.",
+      "ground_truth": "Theo quy chế chi trả lương, thông tin lương được phân loại là dữ liệu Bí mật, cấm chia sẻ với đồng nghiệp. Theo chính sách phân loại dữ liệu, dữ liệu Bí mật (cấp 3) phải mã hóa khi truyền và hạn chế truy cập theo need-to-know.",
+      "worst_metric": "context_recall",
+      "score": 0.7526,
+      "avg_score": 0.84565,
+      "diagnosis": "Hệ thống tìm kiếm bỏ sót đoạn văn đúng",
+      "suggested_fix": "Cải thiện lại bước cắt đoạn hoặc bổ sung từ khóa BM25"
+    },
+    {
+      "question": "Nghỉ phép không lương 20 ngày cần ai phê duyệt?",
+      "answer": "Trích từ nghi_phep_khong_luong.md.\n\nNghỉ từ 1-5 ngày: trưởng phòng phê duyệt. Nghỉ từ 6-15 ngày: cần thêm phê duyệt của Giám đốc Nhân sự. Nghỉ từ 16-30 ngày: cần phê duyệt của **Giám đốc điều hành (CEO)**. ## Ảnh hưởng đến phúc lợi",
+      "ground_truth": "Nghỉ 16-30 ngày cần phê duyệt của Giám đốc điều hành (CEO). Lưu ý: nghỉ trên 14 ngày không lương, nhân viên phải tự đóng phần bảo hiểm của mình.",
+      "worst_metric": "context_recall",
+      "score": 0.7893,
+      "avg_score": 0.854825,
+      "diagnosis": "Hệ thống tìm kiếm bỏ sót đoạn văn đúng",
+      "suggested_fix": "Cải thiện lại bước cắt đoạn hoặc bổ sung từ khóa BM25"
+    },
+    {
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "answer": "Trích từ mua_sam.md.\n\nMua sắm thiết bị CNTT (laptop, server, phần mềm) cần có xác nhận của phòng CNTT về cấu hình kỹ thuật trước khi đề xuất. Đơn hàng khẩn cấp có thể bỏ qua yêu cầu 3 báo giá nhưng phải có giải trình bằng văn bản.",
+      "ground_truth": "Laptop 30 triệu nằm trong khoảng 5-50 triệu nên cần Giám đốc phòng ban (Director) phê duyệt. Ngoài ra, mua sắm thiết bị CNTT cần có xác nhận cấu hình kỹ thuật từ phòng CNTT trước khi đề xuất. Cần đính kèm ít nhất 3 báo giá vì trên 10 triệu.",
+      "worst_metric": "answer_relevancy",
+      "score": 0.85,
+      "avg_score": 0.876525,
+      "diagnosis": "Câu trả lời bị lệch trọng tâm câu hỏi",
+      "suggested_fix": "Viết lại prompt hướng dẫn mô hình trả lời trực tiếp hơn"
+    },
+    {
+      "question": "Nhân viên tạm ứng 15 triệu, sau 20 ngày mới thanh toán. Bị phạt bao nhiêu?",
+      "answer": "Trích từ tam_ung.md.\n\nTrường hợp công tác dài ngày, thời hạn tính từ ngày kết thúc chuyến công tác. ## Phạt quá hạn Khoản tạm ứng chưa thanh toán sau 15 ngày sẽ bị tính phí **2%/tháng** trên số tiền chưa hoàn ứng. Phí này được khấu trừ vào lương tháng kế tiếp.",
+      "ground_truth": "Thời hạn thanh toán là 15 ngày. Quá hạn 5 ngày, bị tính phí 2%/tháng trên 15.000.000 VNĐ = 300.000 VNĐ/tháng (tính pro-rata khoảng 50.000 VNĐ cho 5 ngày).",
+      "worst_metric": "answer_relevancy",
+      "score": 0.85,
+      "avg_score": 0.883575,
+      "diagnosis": "Câu trả lời bị lệch trọng tâm câu hỏi",
+      "suggested_fix": "Viết lại prompt hướng dẫn mô hình trả lời trực tiếp hơn"
+    },
+    {
+      "question": "Lương thử việc của nhân viên Junior mức cao nhất là bao nhiêu?",
+      "answer": "Trích từ bang_luong_2024.md.\n\n| Senior (P3-P4) | 20.000.000 - 35.000.000 | | Lead (P5) | 35.000.000 - 50.000.000 | | Manager (M1-M2) | 45.000.000 - 70.000.000 | ## Lương thử việc Nhân viên trong thời gian thử việc được nhận **85% lương** của cấp bậc tương ứng.",
+      "ground_truth": "Junior cao nhất là 20.000.000 VNĐ/tháng. Lương thử việc = 85% x 20.000.000 = 17.000.000 VNĐ/tháng.",
+      "worst_metric": "answer_relevancy",
+      "score": 0.85,
+      "avg_score": 0.8896499999999999,
+      "diagnosis": "Câu trả lời bị lệch trọng tâm câu hỏi",
+      "suggested_fix": "Viết lại prompt hướng dẫn mô hình trả lời trực tiếp hơn"
+    },
+    {
+      "question": "Có cần kích hoạt xác thực đa yếu tố (MFA) không?",
+      "answer": "Trích từ mat_khau_v2.md.\n\nKhuyến khích sử dụng passphrase dài hơn 16 ký tự. ## Xác thực đa yếu tố (MFA) Tất cả nhân viên **bắt buộc** kích hoạt MFA cho tài khoản email, VPN và các hệ thống nội bộ.",
+      "ground_truth": "Có, theo chính sách mật khẩu v2.0 hiện hành, tất cả nhân viên bắt buộc kích hoạt MFA cho email, VPN và hệ thống nội bộ. Chính sách cũ v1.0 không yêu cầu MFA.",
+      "worst_metric": "answer_relevancy",
+      "score": 0.85,
+      "avg_score": 0.8911,
+      "diagnosis": "Câu trả lời bị lệch trọng tâm câu hỏi",
+      "suggested_fix": "Viết lại prompt hướng dẫn mô hình trả lời trực tiếp hơn"
+    },
+    {
+      "question": "Nhân viên được nghỉ bao nhiêu ngày khi kết hôn?",
+      "answer": "Trích từ nghi_phep_dac_biet.md.\n\n# Chính sách nghỉ phép đặc biệt > Phiên bản: 1.1 | Ngày hiệu lực: 01/03/2024 | Phòng ban: Nhân sự ## Các trường hợp được nghỉ phép đặc biệt Nhân viên được nghỉ có lương trong các trường hợp sau đây mà không trừ vào phép năm: - **Kết hôn**: 3 ngày làm việc",
+      "ground_truth": "Nhân viên được nghỉ 3 ngày làm việc có lương khi kết hôn, không trừ vào phép năm.",
+      "worst_metric": "answer_relevancy",
+      "score": 0.85,
+      "avg_score": 0.895,
+      "diagnosis": "Câu trả lời bị lệch trọng tâm câu hỏi",
+      "suggested_fix": "Viết lại prompt hướng dẫn mô hình trả lời trực tiếp hơn"
+    }
+  ]
+}
